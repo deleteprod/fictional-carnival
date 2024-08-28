@@ -1,6 +1,6 @@
 #variable "region" {
 #  description = "AWS region for deployment"
-  # Default to Dublin
+# Default to Dublin
 #  default = "eu-west-1"
 #}
 
