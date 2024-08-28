@@ -8,12 +8,20 @@ terraform {
 }
 
 provider "aws" {
-  #profile = "default"
-  region = "eu-west-1"
-  # Dublin
+  region = var.region_map["dublin"]
 }
 
-# Start building
+# Start building - VPC
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+
+  tags = {
+    name = "Martian VPC"
+  }
+}
+
+
+# Start building - EC2
 resource "aws_instance" "phobos" {
   # Ubuntu 24.04 on amd64 architecture
   ami           = var.ami_location["dublin"]
@@ -32,7 +40,7 @@ EOF
 
 resource "aws_instance" "deimos" {
   # Ubuntu 24.04 on amd64 architecture
-  ami           = var.dublin_ami
+  ami           = var.ami_location["dublin"]
   instance_type = var.instance_type
 
   user_data = <<EOF
