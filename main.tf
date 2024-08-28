@@ -16,7 +16,7 @@ provider "aws" {
 # Start building
 resource "aws_instance" "phobos" {
   # Ubuntu 24.04 on amd64 architecture
-  ami           = "ami-03cc8375791cb8bcf"
+  ami           = var.dublin_ami
   instance_type = "t2.micro"
 
   tags = {
@@ -26,7 +26,7 @@ resource "aws_instance" "phobos" {
 
 resource "aws_instance" "deimos" {
   # Ubuntu 24.04 on amd64 architecture
-  ami           = "ami-03cc8375791cb8bcf"
+  ami           = var.dublin_ami
   instance_type = "t2.micro"
 
   tags = {
