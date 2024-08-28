@@ -16,7 +16,7 @@ provider "aws" {
 # Start building
 resource "aws_instance" "phobos" {
   # Ubuntu 24.04 on amd64 architecture
-  ami           = var.dublin_ami
+  ami           = var.ami_location["dublin"]
   instance_type = var.instance_type
 
   user_data = <<EOF
