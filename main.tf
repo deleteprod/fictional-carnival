@@ -9,7 +9,7 @@ terraform {
 
 provider "aws" {
   #profile = "default"
-  region  = "eu-west-1"
+  region = "eu-west-1"
   # Dublin
 }
 
