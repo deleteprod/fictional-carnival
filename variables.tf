@@ -10,7 +10,6 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-
 # Map of locations against suitable AMIs
 variable "ami_location" {
   type = map(string)
