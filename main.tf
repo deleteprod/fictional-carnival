@@ -10,4 +10,5 @@ terraform {
 provider "aws" {
   profile = "default"
   region  = "eu-north-1"
+  # Stockholm - default for AWS Free Tier for me
 }
