@@ -9,14 +9,14 @@ terraform {
 
 provider "aws" {
   #profile = "default"
-  region  = "eu-north-1"
-  # Stockholm - default for AWS Free Tier for me
+  region  = "eu-west-1"
+  # Dublin
 }
 
 # Start building
 resource "aws_instance" "phobos" {
-  # Ubuntu 22.04 on amd64 architecture
-  ami           = "ami-0b8d1de8e3c980297"
+  # Ubuntu 24.04 on amd64 architecture
+  ami           = "ami-03cc8375791cb8bcf"
   instance_type = "t2.micro"
 
   tags = {
@@ -25,8 +25,8 @@ resource "aws_instance" "phobos" {
 }
 
 resource "aws_instance" "deimos" {
-  # Ubuntu 22.04 on amd64 architecture
-  ami           = "ami-0b8d1de8e3c980297"
+  # Ubuntu 24.04 on amd64 architecture
+  ami           = "ami-03cc8375791cb8bcf"
   instance_type = "t2.micro"
 
   tags = {
