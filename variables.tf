@@ -1,8 +1,8 @@
-variable "region" {
-  description = "AWS region for deployment"
+#variable "region" {
+#  description = "AWS region for deployment"
   # Default to Dublin
-  default = "eu-west-1"
-}
+#  default = "eu-west-1"
+#}
 
 variable "instance_type" {
   description = "instance_type"
@@ -10,12 +10,8 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-#variable "cidr_block" {
-#  description = "CIDR Block"
-#  type = string
-#}
 
-# Attempt at maps and lookups
+# Map of locations against suitable AMIs
 variable "ami_location" {
   type = map(string)
   default = {
@@ -26,6 +22,7 @@ variable "ami_location" {
   }
 }
 
+# Map of locations against AWS region names
 variable "region_map" {
   type = map(string)
   default = {
