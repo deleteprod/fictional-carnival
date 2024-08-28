@@ -1,3 +1,6 @@
 Unable to find shared profile, default:
     https://stackoverflow.com/questions/75740175/error-configuring-terraform-aws-provider-failed-to-get-shared-config-profile
 
+Enabling SSH etc
+    https://medium.com/@akilblanchard09/creating-aws-ec2-instances-with-ssh-access-using-terraform-f9c3c2996cbd
+
